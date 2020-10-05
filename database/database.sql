@@ -5,6 +5,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema database
 -- -----------------------------------------------------
+
 CREATE SCHEMA IF NOT EXISTS `database` DEFAULT CHARACTER SET utf8 ;
 USE `database` ;
 
@@ -16,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `database`.`aluno` (
   `nome` VARCHAR(50) NOT NULL,
   `sobrenome` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`idaluno`),
-  UNIQUE INDEX `idaluno_UNIQUE` (`idaluno` ASC) VISIBLE)
+  UNIQUE INDEX `idaluno_UNIQUE` (`idaluno` ASC))
 ENGINE = InnoDB;
 
 
@@ -29,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `database`.`curso` (
   `descricao` VARCHAR(140) NOT NULL,
   `cargahoraria` INT NOT NULL,
   PRIMARY KEY (`idcurso`),
-  UNIQUE INDEX `idcurso_UNIQUE` (`idcurso` ASC) VISIBLE)
+  UNIQUE INDEX `idcurso_UNIQUE` (`idcurso` ASC))
 ENGINE = InnoDB;
 
 
@@ -37,18 +38,18 @@ ENGINE = InnoDB;
 -- Table `database`.`cursoaluno`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `database`.`cursoaluno` (
-  `curso_idcurso` INT NOT NULL,
-  `aluno_idaluno` INT NOT NULL,
-  PRIMARY KEY (`curso_idcurso`, `aluno_idaluno`),
-  INDEX `fk_curso_has_aluno_aluno1_idx` (`aluno_idaluno` ASC) VISIBLE,
-  INDEX `fk_curso_has_aluno_curso_idx` (`curso_idcurso` ASC) VISIBLE,
+  `idcurso` INT NOT NULL,
+  `idaluno` INT NOT NULL,
+  PRIMARY KEY (`idcurso`, `idaluno`),
+  INDEX `fk_curso_has_aluno_aluno1_idx` (`idaluno` ASC),
+  INDEX `fk_curso_has_aluno_curso_idx` (`idcurso` ASC),
   CONSTRAINT `fk_curso_has_aluno_curso`
-    FOREIGN KEY (`curso_idcurso`)
+    FOREIGN KEY (`idcurso`)
     REFERENCES `database`.`curso` (`idcurso`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_curso_has_aluno_aluno1`
-    FOREIGN KEY (`aluno_idaluno`)
+    FOREIGN KEY (`idaluno`)
     REFERENCES `database`.`aluno` (`idaluno`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

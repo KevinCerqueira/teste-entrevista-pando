@@ -1,4 +1,4 @@
-use `database`
+use `database`;
 
 INSERT INTO `aluno` (idaluno, nome, sobrenome) VALUES 
 (1, 'Kevin', 'Cerqueira'),
@@ -16,7 +16,7 @@ INSERT INTO `curso` (idcurso, nome, descricao,cargahoraria) VALUES
 (1, 'Laravel 8.x - Do básico ao avançado', 'Aprenda a desenvolver sites e aplicações modernas com o mais poderoso Framework PHP.', 20),
 (2, 'Web Design: Construa Sites com PHP, HTML, CSS e JavaScript', 'Curso completo para aprender a construir sites usando as linguagens web mais conceituadas do mercado', 24),
 (3, 'WebScraping usando API, Beautiful Soup e Pandas', 'Scrape sua primeira página da web usando Python API, Beautiful Soup e Python e estruture os dados usando Pandas', 2),
-(4, 'Bootstrap 4 - Completo, Prático e Responsivo', 'Crie Design Responsivos para dashboards, marketing de produtos e para aplicações com o curso mais completo e prático', 8),
+(4, 'Bootstrap 4 - Completo, Prático e Responsivo', 'Crie Design Responsivos para dashboards, marketing de produtos e para aplicações com o curso mais completo e prático', 8);
 
 INSERT INTO `cursoaluno` (idcurso, idaluno) VALUES 
 (1, 1),
@@ -38,4 +38,4 @@ INSERT INTO `cursoaluno` (idcurso, idaluno) VALUES
 (4, 3),
 (4, 4),
 (4, 7),
-(4, 10),
+(4, 10);

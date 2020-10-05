@@ -1,0 +1,36 @@
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.a-menu{
+    text-decoration: underline;
+    /* margin-bottom: 12px; */
+}
+.a-menu:hover{
+    color: #000 !important;
+    background-color: #FFF;
+
+}
+.horizontal{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+.links{
+    color: #FFF;
+    text-decoration: none;
+}
+.links:hover{
+    color: #000;
+    /* font-weight: bold; */
+    background-color: #FFF;
+
+}
