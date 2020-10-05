@@ -99,11 +99,11 @@
                                             <div class="row">
                                                 <div class="col-md-10">
                                                     <a class="h3 text-dark font-weight-light" data-toggle="collapse"
-                                                    href="#descricaoCurso{{$curso['id']}}" role="button"
-                                                    aria-expanded="false"
-                                                    aria-controls="descricaoCurso{{$curso['id']}}">
-                                                    {{$curso['nome']}}
-                                                </a>
+                                                        href="#descricaoCurso{{$curso['id']}}" role="button"
+                                                        aria-expanded="false"
+                                                        aria-controls="descricaoCurso{{$curso['id']}}">
+                                                        {{$curso['nome']}}
+                                                    </a>
                                                 </div>
                                                 <div class="col-md-2 h3">
                                                     {{$curso['cargahoraria']}}hr
@@ -166,7 +166,8 @@
                                                     <div class="collapse" id="descricaoCurso{{$curso['id']}}">
                                                         <div class="card card-body h5 font-weight-light">
                                                             @foreach ($curso['alunos'] as $key => $aluno)
-                                                            <div class="row border p-2 mb-1 bg-secondary rounded text-white">
+                                                            <div
+                                                                class="row border p-2 mb-1 bg-secondary rounded text-white">
                                                                 <div class="col-md-1 h3">
                                                                     {{$key + 1}}
                                                                 </div>
@@ -174,9 +175,10 @@
                                                                     {{$aluno['nome']}}
                                                                 </div>
                                                                 <div class="col-md-4">
-                                                                    <a target="_blank" href="{{ route('gerarCertificado', ['idaluno'=> $aluno['id'], 'idcurso' => $curso['id']]) }}"
+                                                                    <a target="_blank"
+                                                                        href="{{ route('gerarCertificado', ['idaluno'=> $aluno['id'], 'idcurso' => $curso['id']]) }}"
                                                                         class="btn btn-light">
-                                                                            Gerar Certificado
+                                                                        Gerar Certificado
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -205,7 +207,8 @@
     <fieldset class="border text-white p-2">
         <legend class="h4 font-weight-light text-white">Repositório</legend>
         <p class="h4 horizontal font-weight-light">
-            <a target="_blank" class="links rounded p-1" href="https://github.com/KevinCerqueira/teste-entrevista-pando">
+            <a target="_blank" class="links rounded p-1"
+                href="https://github.com/KevinCerqueira/teste-entrevista-pando">
                 github.com/KevinCerqueira/teste-entrevista-pando</a>
         </p>
     </fieldset>
