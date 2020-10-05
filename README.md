@@ -1,6 +1,6 @@
 # Cursos & Alunos - Gerador de certificados
 Um teste simples para a entrevista feita pela @pando.com.vc
-#### Requisitos para rodar:
+#### Requisitos:
 - PHP >= 7.4.9;
 - Composer;
 - XAMPP/LAMP/WAMP/MySQL Workbench (para servir o banco de dados)
